@@ -1,0 +1,11 @@
+<h1>Create VM</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="/vm/create_vm/do/" method="post">
+{% csrf_token %}
+	<input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+	<label for="choice{{ forloop.counter }}">{{ choice.choice }}</label><br />
+	<input type="submit" value="Create" />
+</form>
+
