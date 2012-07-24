@@ -8,7 +8,6 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'django_test.views.home', name='home'),
     # url(r'^django_test/', include('django_test.foo.urls')),
-      url(r'^time/$', 'dtime.views.current_time'),
     url(r'^vm/create/$', 'qvm.views.create_vm'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
