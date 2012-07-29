@@ -1,0 +1,21 @@
+{% for f in form %}
+  {% if f.errors %}
+  <tr>
+  <td colspan="2">{{ f.errors }}</td>
+  </tr>
+  {% endif %}
+
+  <tr>
+  <th{% if f.field.required %} class="required"{% endif %}>
+  <label for="id_{{ f.name }}">{{ f.label }}</label>
+  </th>
+  <td>{{ f }}</td>
+  </tr>
+
+  {% if f.help_text %}
+  <tr>
+  <td></td>
+  <td class="help_text">{{ f.help_text }}</td>
+  </tr>
+  {% endif %}
+{% endfor %}
